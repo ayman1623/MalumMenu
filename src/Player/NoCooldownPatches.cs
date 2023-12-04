@@ -2,7 +2,7 @@ using HarmonyLib;
 
 namespace MalumMenu;
 
-[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.RpcShapeshift))]
+[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.RpcRejectShapeshift))]
 public static class NoCooldowns_ShapeshiftPrefix
 {
     //Prefix patch of PlayerControl.RpcShapeshift to remove shapeshift animation
@@ -21,7 +21,7 @@ public static class NoCooldowns_ShapeshiftPrefix
     }
 }
 
-[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.RpcRevertShapeshift))]
+[HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.RpcRevertRejectShapeshift))]
 public static class NoCooldowns_RevertShapeshiftPrefix
 {
     //Prefix patch of PlayerControl.RpcRevertShapeshift to remove shapeshift animation
